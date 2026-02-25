@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs"></div>
+
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" disabled placeholder="0">
+            <div class="buttons">
+                <button class="sci" onclick="scientific('sin')">sin</button>
+                <button class="sci" onclick="scientific('cos')">cos</button>
+                <button class="sci" onclick="scientific('tan')">tan</button>
+                <button class="sci" onclick="scientific('ln')">ln</button> 
+                <button class="sci" onclick="scientific('fact')">n!</button>
+                <button class="sci" onclick="scientific('sqrt')">√</button>
+                <button class="sci" onclick="scientific('log')">log</button>
+                <button class="sci" onclick="appendToDisplay('**')">^</button>
+                <button class="sci" onclick="scientific('pi')">π</button>
+                <button class="op" onclick="appendToDisplay('/')">÷</button>
+                
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button class="op" onclick="appendToDisplay('*')">×</button>
+                <button class="op" onclick="appendToDisplay('(')">(</button>
+                
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button class="op" onclick="appendToDisplay('-')">−</button>
+                <button class="op" onclick="appendToDisplay(')')">)</button>
+                
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button class="op" onclick="appendToDisplay('+')">+</button>
+                <button class="equal" onclick="calculate()">=</button>
+                
+                <button class="zero" onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button class="ctrl" onclick="clearDisplay()">AC</button>
+                <button class="ctrl" onclick="deleteLast()">DEL</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 Calculator | Built with <span class="heart">&hearts;</span> by <strong>SRINJOY SIL</strong></p>
+    </footer>
+
+    <script src="logic.js"></script>
+</body>
+</html>
